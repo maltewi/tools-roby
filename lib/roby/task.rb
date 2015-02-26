@@ -948,7 +948,7 @@ module Roby
         def event_model(model); self.model.event_model(model) end
 
         def to_s # :nodoc:
-	    s = name.dup + arguments.to_s
+	    s = name.dup# + arguments.to_s
 	    id = owners.map do |owner|
 		next if owner == Roby::Distributed
 		sibling = remote_siblings[owner]
