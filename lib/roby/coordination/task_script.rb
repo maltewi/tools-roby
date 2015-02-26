@@ -157,6 +157,7 @@ module Roby
             def sleep(seconds)
                 task = start(Tasks::Timeout.new(:delay => seconds))
                 wait task.stop_event
+                emit success_event
             end
 
             # Emit the given event
