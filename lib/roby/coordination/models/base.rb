@@ -35,6 +35,10 @@ module Roby
                 root.find_event(name)
             end
 
+            def event(name)
+                root.model.event name.to_sym
+            end
+
             # Returns a model suitable for typing in {Task}
             #
             # More specifically, it either returns a coordination model if the
